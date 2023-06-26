@@ -6,7 +6,6 @@ ContadorLib::ContadorLib(int buttonPin)
 }
 
 void ContadorLib::begin() {
-
   display.init();
   display.flipScreenVertically();
   display.setFont(ArialMT_Plain_24);
@@ -14,6 +13,7 @@ void ContadorLib::begin() {
 
   currentButtonState = digitalRead(buttonPin);
 }
+
 void ContadorLib::update() {
   lastButtonState = currentButtonState;
   currentButtonState = digitalRead(buttonPin);
@@ -33,3 +33,4 @@ void ContadorLib::update() {
     display.display();
   }
 }
+
